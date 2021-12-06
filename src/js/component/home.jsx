@@ -19,24 +19,21 @@ const Home = props => {
 					</svg>
 				</div>
 				<div className="col-1 bg-dark text-white">
-					{props.timer / 1000}
+					{props.milecimas}
 				</div>
-				<div className="col-1 bg-dark text-white">
-					{props.timer / 100}
-				</div>
-				<div className="col-1 bg-dark text-white">
-					{props.timer / 10}
-				</div>
-				<div className="col-1 bg-dark text-white">
-					{props.timer / 1}
-				</div>
+				<div className="col-1 bg-dark text-white">{props.centenas}</div>
+				<div className="col-1 bg-dark text-white">{props.decenas}</div>
+				<div className="col-1 bg-dark text-white">{props.unidades}</div>
 			</div>
 		</div>
 	);
 };
 
 Home.propTypes = {
-	timer: PropTypes.number
+	unidades: PropTypes.number,
+	decenas: PropTypes.number,
+	centenas: PropTypes.number,
+	milecimas: PropTypes.number
 };
 
 export default Home;
